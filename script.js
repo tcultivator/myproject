@@ -10,8 +10,8 @@ function User(username, password, access) {
 }
 
 const Accounts = new User(localStorage.getItem('username'), localStorage.getItem('password'),false);
-console.log(Accounts.username);
-console.log(Accounts.password);
+console.log('eto ung username na nakuha sa localstorage',Accounts.username);
+console.log('eto ung password na nakuha sa localstorage',Accounts.password);
 
 
 Accounts.access;
