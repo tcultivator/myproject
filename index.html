@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bank App</title>
+</head>
+
+<body id="contentBody">
+    <nav>
+        <div id="navLeft">
+            <h3>LOGO</h3>
+        </div>
+        <div id="navRight">
+            <div>
+                <a href="about.html" target="_blank">About</a>
+                <label for=""></label>
+            </div>
+
+            <div>
+                <a href="mailto: lpanahon06@gmail.com">Contact</a>
+                <label for=""></label>
+            </div>
+             <div>
+                <a onclick="logout()">Logout</a>
+                <label for=""></label>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id="balanceBody">
+        <div>
+            <label>Balance: <strong id="accountBalance"></strong></label>
+        </div>
+        <div id="buttons">
+            <button onclick="showDepositModal()">Deposit</button>
+            <button onclick="showWithdrawModal()">Withdraw</button>
+        </div>
+
+    </div>
+
+    <div popover="auto" id="depositModal">
+        <div class="depositContent">
+            <label class="depoTitle">DEPOSIT</label>
+            <label for="">Enter Amount</label>
+            <input id="depositInput" type="text" disabled>
+            <div id="numPadBody">
+                <button id="numPad" onclick="numPadDepo('7')">7</button>
+                <button id="numPad" onclick="numPadDepo('8')">8</button>
+                <button id="numPad" onclick="numPadDepo('9')">9</button>
+                <button id="numPad" onclick="numPadDepo('6')">6</button>
+                <button id="numPad" onclick="numPadDepo('5')">5</button>
+                <button id="numPad" onclick="numPadDepo('4')">4</button>
+                <button id="numPad" onclick="numPadDepo('3')">3</button>
+                <button id="numPad" onclick="numPadDepo('2')">2</button>
+                <button id="numPad" onclick="numPadDepo('1')">1</button>
+                <button id="numPad" onclick="numPadDepo('.')">.</button>
+                <button id="numPad" onclick="numPadDepo('0')">0</button>
+                  <button id="numPadDel" onclick="numPadDepo('del')">&#8592;</button>
+            </div>
+            <div class="actionBtn">
+                <button id="depoCancel" onclick="hideDepositModal()">Cancel</button>
+                <button id="depoConfirm" onclick="deposit()">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <div popover="auto" id="withdrawModal">
+        <div class="withdrawContent">
+            <label class="withdrawTitle">WITHDRAW</label>
+            <label for="">Enter Amount</label>
+            <input id="withdrawInput" type="text" disabled>
+            <div id="numPadBody">
+                <button id="numPad" onclick="numPadWithdraw('7')">7</button>
+                <button id="numPad" onclick="numPadWithdraw('8')">8</button>
+                <button id="numPad" onclick="numPadWithdraw('9')">9</button>
+                <button id="numPad" onclick="numPadWithdraw('4')">4</button>
+                <button id="numPad" onclick="numPadWithdraw('5')">5</button>
+                <button id="numPad" onclick="numPadWithdraw('6')">6</button>
+                <button id="numPad" onclick="numPadWithdraw('1')">1</button>
+                <button id="numPad" onclick="numPadWithdraw('2')">2</button>
+                <button id="numPad" onclick="numPadWithdraw('3')">3</button>
+                <button id="numPad" onclick="numPadWithdraw('.')">.</button>
+                <button id="numPad" onclick="numPadWithdraw('0')">0</button>
+                <button id="numPadDel" onclick="numPadWithdraw('del')">&#8592;</button>
+            </div>
+            <div class="actionBtn">
+                <button id="withdrawCancel" onclick="hideWithdrawModal()">Cancel</button>
+                <button id="withdrawConfirm" onclick="withdraw()">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="anotherContent">
+        <h2></h2>
+    </div>
+
+
+    <div popover="auto" id="successPopup">
+        <div>
+            <label for="">&#10004;</label>
+        </div>
+    </div>
+
+    <div popover="auto" id="errorPopup">
+        <div>
+            <label for="">&#10006;</label>
+        </div>
+    </div>
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+body {
+    background-color: rgb(74, 136, 230);
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.formBody {
+    display: flex;
+
+
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 35px;
+    width: 100%;
+    max-width: 50lh;
+    box-sizing: border-box;
+
+}
+
+form {
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    max-width: 330px;
+
+}
+
+/*login*/
+#login {
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 35px;
+    height: 400px;
+    text-align: center;
+
+
+}
+
+#login .usernameBody {
+
+    display: flex;
+    align-items: center;
+
+}
+
+#login #usernameLogin {
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid rgb(83, 83, 83);
+    outline-color: rgb(71, 135, 177);
+}
+
+#login .usernameBody label {
+    position: absolute;
+    margin-left: 15px;
+    transition: .3s;
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+    cursor: text;
+}
+
+#login #usernameLogin:focus~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 2px solid rgb(71, 135, 177);
+    border-right: 2px solid rgb(71, 135, 177);
+    padding: 0px 5px;
+
+}
+
+#login #usernameLogin:not(:placeholder-shown)~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0px 5px;
+
+}
+
+#login .passwordBody {
+
+    display: flex;
+    align-items: center;
+
+}
+
+#login #passwordLogin {
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 20px;
+    border: 1px solid rgb(83, 83, 83);
+    outline-color: rgb(71, 135, 177);
+}
+
+#login .passwordBody label {
+    position: absolute;
+    margin-left: 15px;
+    transition: .3s;
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+    cursor: text;
+}
+
+#login #passwordLogin:focus~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 2px solid rgb(71, 135, 177);
+    border-right: 2px solid rgb(71, 135, 177);
+    padding: 0px 5px;
+
+
+
+}
+
+#login #passwordLogin:not(:placeholder-shown)~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0px 5px;
+
+}
+
+.formBody .buttonBody {
+
+    display: flex;
+    gap: 10px;
+
+
+}
+
+.formBody .buttonBody button {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(83, 83, 83);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.formBody .buttonBody button[type='submit'] {
+    background-color: rgb(71, 135, 177);
+    color: white;
+
+}
+
+.formBody .buttonBody button[type='submit']:hover {
+    background-color: rgb(87, 172, 230);
+
+
+}
+
+.formBody .buttonBody button[type='button'] {
+    background-color: white;
+    color: rgb(71, 135, 177);
+    border: 1px solid rgb(87, 172, 230);
+}
+
+.formBody .buttonBody button[type='button']:hover {
+    background-color: rgb(241, 241, 241);
+
+
+}
+
+
+
+
+
+
+
+
+
+/*register*/
+
+
+
+
+
+
+#register {
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 35px;
+    height: 400px;
+    text-align: center;
+    
+
+}
+
+#register .usernameBody {
+
+    display: flex;
+    align-items: center;
+
+}
+
+#register #username {
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: transparent;
+    
+    font-size: 20px;
+    border: 1px solid rgb(83, 83, 83);
+    outline-color: rgb(71, 135, 177);
+}
+
+#register .usernameBody label {
+    position: absolute;
+    margin-left: 15px;
+    transition: .3s;
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+    cursor: text;
+}
+
+#register #username:focus~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 2px solid rgb(71, 135, 177);
+    border-right: 2px solid rgb(71, 135, 177);
+    padding: 0px 5px;
+    
+}
+
+#register #username:not(:placeholder-shown)~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0px 5px;
+
+}
+
+#register .passwordBody {
+
+    display: flex;
+    align-items: center;
+
+}
+
+#register #password {
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: transparent;
+    
+    font-size: 20px;
+    border: 1px solid rgb(83, 83, 83);
+    outline-color: rgb(71, 135, 177);
+}
+
+#register .passwordBody label {
+    position: absolute;
+    margin-left: 15px;
+    transition: .3s;
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+    cursor: text;
+}
+
+#register #password:focus~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 2px solid rgb(71, 135, 177);
+    border-right: 2px solid rgb(71, 135, 177);
+    padding: 0px 5px;
+    
+
+
+}
+
+#register #password:not(:placeholder-shown)~label {
+    color: rgb(71, 135, 177);
+    font-weight: bold;
+    transform: translate(-3px, -20px);
+    font-size: 15px;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0px 5px;
+
+}
+
+#register a {
+    color: rgb(78, 78, 78);
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+.formBody #switch {
+    background-color: rgb(74, 136, 230);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 35px;
+    height: 400px;
+    text-align: center;
+    position: absolute;
+
+    transition: .2s ease;
+    text-align: center;
+    justify-content: center;
+
+
+}
+
+.formBody #switch h1 {
+    color: white;
+    font-size: 50px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*success popup*/
+#successPopup {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.336);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#successPopup div {
+    background-color: rgba(14, 172, 61, 0.5);
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    animation: popup .3s;
+
+}
+
+#successPopup div label {
+
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+
+
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+/*error popup*/
+#errorPopup {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.336);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#errorPopup div {
+    background-color: rgb(231, 45, 45);
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    animation: popup .3s;
+
+}
+
+#errorPopup div label {
+
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+
+
+}

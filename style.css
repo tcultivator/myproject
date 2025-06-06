@@ -1,0 +1,454 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: none;
+    background-color: rgb(74, 136, 230);
+    overflow: hidden;
+}
+
+/* navigation bar to */
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+nav #navRight{
+    cursor: pointer;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+nav #navRight div {
+    display: flex;
+    margin: 0 30px;
+    
+
+}
+
+nav div a {
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+    transition: .3s;
+    font-weight: bold;
+     padding: 3px 0;
+    width: 100%;
+    
+}
+
+nav div label {
+    
+    z-index: -1;
+    position: absolute;
+    max-width: 60px;
+    height: 20px;
+    border: 5px;
+    border-bottom: 2px solid white;
+    
+    overflow: hidden;
+    transition: .5s;
+    width: 0;
+
+}
+
+nav div a:hover+label {
+    width: 100px;
+    
+
+}
+
+nav div a:hover {
+    transform: translateY(-10px);
+    color: white;
+   
+}
+
+/* eto na ung content mismo */
+
+#balanceBody {
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgb(61, 61, 61);
+    margin: 0px 10px;
+    padding: 10px 10px;
+    border-radius: 7px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#balanceBody #buttons {
+
+
+
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#balanceBody button {
+    width: 100%;
+    background-color: rgb(15, 110, 155);
+    border: 1px solid white;
+    border-radius: 7px;
+
+    aspect-ratio: 3/1;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+
+#anotherContent {
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgb(61, 61, 61);
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius: 7px;
+    height: 100vh;
+}
+
+/*deposit modal*/
+#depositModal {
+    background-color: rgba(0, 0, 0, 0.336);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+#depositModal .depositContent {
+    background-color: rgb(15, 110, 155);
+    border-radius: 5px;
+    position: fixed;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    animation: popup .2s;
+}
+
+#depositModal .depositContent .depoTitle {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#depositModal .depositContent input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px 0;
+    font-size: 30px;
+    background-color: white;
+    color: black;
+
+}
+
+#depositModal .depositContent #numPadBody {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 7px;
+
+}
+
+#depositModal .depositContent #numPadBody #numPad,#numPadDel {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .2s;
+    background-color: white;
+}
+#depositModal .depositContent #numPadBody #numPad:hover {
+   box-shadow: 2px 4px 4px rgb(51, 51, 51);
+   transform: translate(-2px,-2px);
+}
+
+#depositModal .depositContent #numPadBody #numPadDel:hover {
+   box-shadow: 2px 4px 4px rgb(51, 51, 51);
+   transform: translate(-2px,-2px);
+}
+#depositModal .depositContent #numPadBody #numPad:active {
+  background-color: rgba(89, 214, 231, 0.514);
+}
+#depositModal .depositContent #numPadBody #numPadDel:active {
+  background-color: rgba(89, 214, 231, 0.514);
+}
+
+
+#depositModal .depositContent div {
+
+    display: flex;
+    gap: 10px;
+}
+
+#depositModal .depositContent .actionBtn button {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+}
+
+#depositModal .depositContent #depoCancel {
+    background-color: rgb(170, 29, 29);
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+#depositModal .depositContent #depoConfirm {
+    background-color: rgb(18, 131, 46);
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+#depositModal .depositContent #depoCancel:hover {
+    background-color: rgb(240, 55, 55);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 3px rgba(255, 255, 255, 0.123);
+
+}
+
+#depositModal .depositContent #depoConfirm:hover {
+    background-color: rgb(41, 194, 79);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 3px rgba(255, 255, 255, 0.123);
+
+}
+
+
+/*withdraw modal*/
+#withdrawModal {
+    background-color: rgba(0, 0, 0, 0.336);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+#withdrawModal .withdrawContent {
+    background-color: rgb(15, 110, 155);
+    border-radius: 5px;
+    position: fixed;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    animation: popup .2s;
+}
+
+#withdrawModal .withdrawContent .withdrawTitle {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#withdrawModal .withdrawContent input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px 0;
+    font-size: 30px;
+    background-color: white;
+    color: black;
+}
+
+#withdrawModal .withdrawContent #numPadBody {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 7px;
+
+}
+
+#withdrawModal .withdrawContent #numPadBody #numPad {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .2s;
+    background-color: white;
+}
+
+#withdrawModal .withdrawContent #numPadBody #numPadDel {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .2s;
+    background-color: white;
+}
+
+#withdrawModal .withdrawContent #numPadBody #numPad:hover {
+   box-shadow: 2px 4px 4px rgb(51, 51, 51);
+   transform: translate(-2px,-2px);
+}
+
+#withdrawModal .withdrawContent #numPadBody #numPadDel:hover {
+   box-shadow: 2px 4px 4px rgb(51, 51, 51);
+   transform: translate(-2px,-2px);
+}
+#withdrawModal .withdrawContent #numPadBody #numPad:active {
+  background-color: rgba(89, 214, 231, 0.514);
+}
+#withdrawModal .withdrawContent #numPadBody #numPadDel:active {
+  background-color: rgba(89, 214, 231, 0.514);
+}
+
+#withdrawModal .withdrawContent div {
+
+    display: flex;
+    gap: 10px;
+}
+
+#withdrawModal .withdrawContent button {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+}
+
+#withdrawModal .withdrawContent #withdrawCancel {
+    background-color: rgb(170, 29, 29);
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+#withdrawModal .withdrawContent #withdrawConfirm {
+    background-color: rgb(18, 131, 46);
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+#withdrawModal .withdrawContent #withdrawCancel:hover {
+    background-color: rgb(240, 55, 55);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 3px rgba(255, 255, 255, 0.123);
+}
+
+#withdrawModal .withdrawContent #withdrawConfirm:hover {
+    background-color: rgb(41, 194, 79);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 3px rgba(255, 255, 255, 0.123);
+}
+
+
+
+
+
+/*success popup*/
+#successPopup {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.336);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#successPopup div {
+    background-color: rgba(14, 172, 61, 0.5);
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    animation: popup .3s;
+
+}
+
+#successPopup div label {
+
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+
+
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+/*error popup*/
+#errorPopup {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.336);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#errorPopup div {
+    background-color: rgb(231, 45, 45);
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    animation: popup .3s;
+
+}
+
+#errorPopup div label {
+
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+
+
+}
