@@ -9,7 +9,7 @@ function User(username, password, access) {
 
 }
 
-const Accounts = new User(localStorage.getItem('username'), localStorage.getItem('password'), localStorage.getItem('access'));
+const Accounts = new User(localStorage.getItem('username'), localStorage.getItem('password'),false);
 
 
 
@@ -21,7 +21,7 @@ const password = params.get('password');
 
 
 if (username != Accounts.username || password != Accounts.password) {
-    if (Accounts.access == 'false') {
+    if (Accounts.access == false) {
         window.location.replace('login.html');
     }
     else {
@@ -31,7 +31,7 @@ if (username != Accounts.username || password != Accounts.password) {
 }
 
 else {
-    localStorage.setItem('access', true);
+    Accounts.access = true;
     document.getElementById('contentBody').style = `display:block;`;
 }
 
@@ -204,7 +204,7 @@ function errorModal() {
 function logout() {
     if (confirm('Are you sure')) {
         document.getElementById('contentBody').style = `display:initial;`;
-        localStorage.setItem('access',false)
+        Account.access = false;
         window.location.replace('login.html');
     }
 
