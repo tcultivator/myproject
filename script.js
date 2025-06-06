@@ -98,6 +98,7 @@ function deposit() {
         depositInput = document.getElementById('depositInput').value = '';
         hideDepositModal();
         successModal();
+        console.log('nakapag deposit na');
     } else {
         errorModal();
 
