@@ -10,7 +10,8 @@ function User(username, password, access) {
 }
 
 const Accounts = new User(localStorage.getItem('username'), localStorage.getItem('password'),false);
-
+console.log(Accounts.username);
+console.log(Accounts.password);
 
 
 Accounts.access;
