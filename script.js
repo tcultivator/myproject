@@ -20,7 +20,7 @@ const password = params.get('password');
 
 
 
-if (username != Accounts.username || password != Accounts.password || username == '' || password == '') {
+if (username != Accounts.username || password != Accounts.password || !Accounts.username || !Accounts.password) {
     if (Accounts.access == false) {
         window.location.replace('login.html');
     }
