@@ -204,7 +204,7 @@ function errorModal() {
 function logout() {
     if (confirm('Are you sure')) {
         document.getElementById('contentBody').style = `display:initial;`;
-        Account.access = false;
+        Accounts.access = false;
         window.location.replace('login.html');
     }
 
