@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Player</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="mp3Icon">
+            <img src="src/mp3Icon.png" alt="" id="icon">
+
+        </div>
+        <label id="musicName">Music Name</label>
+        <audio id="audio"></audio>
+        <input class="form-range-control" id="duration" type="range">
+        <div class="buttons">
+            <button onclick="repeat()"><span id="repeat" class="glyphicon glyphicon-repeat"></span></button>
+            <button><span class="glyphicon glyphicon-backward"></span></button>
+            <button onclick="playBtn()" id="playBtn" disabled><span class="glyphicon glyphicon-play"></span></button>
+
+            <button><span class="glyphicon glyphicon-forward"></span></button>
+            <button onclick="songList()"> <span class="glyphicon glyphicon-list"></button>
+
+
+        </div>
+
+
+        <div id="songlist">
+            <div class="div1">
+                <label for="">Song List</label>
+                <button onclick="songList()"> <span class="glyphicon glyphicon-list"></button>
+            </div>
+
+            <div>
+                <li onclick="selectSong('src/multo.mp3')">Multo</li>
+                <li onclick="selectSong('src/kalimutanKa.mp3')">Kalimutan Ka</li>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
